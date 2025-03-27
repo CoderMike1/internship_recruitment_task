@@ -7,47 +7,38 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 @Table
 public class SwiftData {
 
     @Id
-    @Column(name = "swiftCode")
-    //@NotNull(message = "parameter is required: 'swiftCode' : string")
     @NotBlank(message = "parameter is required and cannot be blank: 'swiftCode' : string")
     private String swiftCode;
 
-    @Column(name = "bankName")
     @NotNull(message = "parameter is required: 'bankName' : string")
     private String bankName;
 
-    @Column(name = "address")
     @NotNull(message = "parameter is required: 'address' : string")
     private String address;
 
-    @Column(name = "townName")
     private String townName;
 
-    @Column(name = "countryName")
     @NotNull(message = "parameter is required: 'countryName' : string")
     private String countryName;
 
-    @Column(name = "timeZone")
     private String timeZone;
 
-    @Column(name = "codeType")
     private String codeType;
 
-    @Column(name = "countryISO2")
+    @Pattern(regexp = "^[A-Za-z]{2}$", message = "parameter 'countryISO2' must contain exactly 2 letters")
     @NotNull(message = "parameter is required and cannot be blank: 'countryISO2' : string")
     private String countryISO2;
 
-    @Column(name = "isHeadquarter")
     @NotNull(message = "parameter is required: 'isHeadquarter' : bool")
     private Boolean isHeadquarter;
 
-    @Column(name = "headQuarterCode")
     private String headQuarterCode;
     public SwiftData(){}
 

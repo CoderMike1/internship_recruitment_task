@@ -1,15 +1,17 @@
 # REMITLY Summer Internship 2025 Recruitment Exercise
 
 
-![Java](https://img.shields.io/badge/java-red?style=for-the-badge&logo=java)
+![Java](https://img.shields.io/badge/java-21-red?style=for-the-badge&logo=java&color=red)
+![Spring](https://img.shields.io/badge/spring-3.4.4-green?style=for-the-badge&logo=spring-boot)
 ![Docker](https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=docker)
 ![Postgresql](https://img.shields.io/badge/POSTGRESQL-yellow?style=for-the-badge&logo=postgresql)
 
 ## 📝 **Table of contents**
-* [General info](#-general-info)
-* [Setup](#-setup)
-* [Run](#-run)
-* [Test](#-test)
+* [General info](#general-info)
+* [Setup](#setup)
+* [Run](#run)
+* [Test](#test)
+* [Errors](#errors)
 ---
 
 ## General Info
@@ -17,9 +19,10 @@
 This application was made for the recruitment process at Remitly.
 It exposes a REST API that manages SWIFT codes and allows users to:
 - retrieve bank information by SWIFT code or country code
-- add new Swift Code
+- add new SWIFT Code
 - delete records
 
+REST API was written in Java 21 with SpringBoot 3.4.4 framework.<br>
 All data is stored in PostgreSQL database.<br>
 Application can be deployed on any device thanks to docker containerization.
 
@@ -186,3 +189,95 @@ http://localhost:8080/v1/swift-codes/BIGBPLPWCUS
       ]
   }
     ```
+
+### 3. Add new Swift code
+
+#### Request:
+- Request method:<br>
+  ``
+  POST /v1/swift-codes
+  ``
+  ``
+  Content-type: application/json
+  ``
+- Request body:<br>
+   ```
+   {
+    "address": string,
+    "bankName": string,
+    "countryISO2": string,
+    "countryName": string,
+    “isHeadquarter”: bool,
+    "swiftCode": string,
+   }
+   ```
+- Example request:<br>
+  ``
+  http://localhost:8080/v1/swift-codes/country/PL
+  ``
+  ```
+  {
+    "address": "Gold 89b",
+    "bankName": "GoldenBank",
+    "countryISO2":"CA",
+    "countryName": "Canada",
+    "isHeadquarter": false,
+    "swiftCode": "AABBCCDDEE99"
+  }
+  ```
+#### Response:
+- Response success code:<br>
+  ``201``
+- Response structure:
+  ```
+  {
+    "message": string,
+  }
+  ```
+- Response example:
+  ```
+  {
+    "message": "Successfully added new swift code"
+  }
+  ```
+
+### 4. Delete Swift code record
+
+#### Request:
+- Request method:<br>
+  ``
+  DELETE /v1/swift-codes/{swift-code}
+  ``
+- Example request:<br>
+  ``
+  http://localhost:8080/v1/swift-codes/AABBCCDDEE99
+  ``
+#### Response:
+- Response success code:<br>
+  ``200``
+- Response structure:
+  ```
+  {
+    "message": string,
+  }
+  ```
+- Response example:
+  ```
+  {
+    "message": "Successfully deleted swift code 'AABBCCDDEE99'"
+  }
+  ```
+
+## Test
+
+### Application is tested while building a image
+
+## Errors 
+
+### Application catches the edge cases of wrong payload / wrong behaviour and returns to user error message
+<p align="center">
+<img src="screenshots/e1.png"  width="700" style="margin: 10px;">
+<img src="screenshots/e2.png"  width="700" style="margin: 10px;">
+<img src="screenshots/e3.png"  width="700" style="margin: 10px;">
+<img src="screenshots/e4.png"  width="700" style="margin: 10px;">
+</p>
