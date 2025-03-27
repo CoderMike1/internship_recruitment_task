@@ -14,6 +14,7 @@ import jakarta.validation.constraints.Pattern;
 public class SwiftData {
 
     @Id
+    @Pattern(regexp = "^[A-Za-z0-9]{8,11}$", message = "Swift code must be 8 or 11 alphanumeric characters")
     @NotBlank(message = "parameter is required and cannot be blank: 'swiftCode' : string")
     private String swiftCode;
 
