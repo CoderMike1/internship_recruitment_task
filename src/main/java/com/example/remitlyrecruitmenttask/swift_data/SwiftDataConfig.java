@@ -24,7 +24,7 @@ public class SwiftDataConfig {
 
             try{
                 CSVReader reader = new CSVReader(new InputStreamReader(inputStream));
-
+                reader.readNext();
                 List<String[]> rows = reader.readAll();
 
                 for(String[] row : rows){

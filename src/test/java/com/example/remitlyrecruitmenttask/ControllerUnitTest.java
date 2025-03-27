@@ -147,7 +147,7 @@ public class ControllerUnitTest {
         s2.setBankName("GermanBankV1");
         s2.setCountryName("Germany");
         s2.setIsHeadquarter(false);
-        s2.setSwiftCode("AABBCCDDEE99");
+        s2.setSwiftCode("FV34JKCMXXX");
 
 
         mockMvc.perform(post("/v1/swift-codes")

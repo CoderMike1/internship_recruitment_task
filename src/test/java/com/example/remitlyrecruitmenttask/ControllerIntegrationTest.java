@@ -26,7 +26,7 @@ public class ControllerIntegrationTest {
     void shouldReturnSwiftCode() throws Exception{
         SwiftData newData = new SwiftData();
 
-        newData.setSwiftCode("TEST123");
+        newData.setSwiftCode("YDH34GVF");
         newData.setAddress("krakow karmelicka 190");
         newData.setBankName("NeuBank");
         newData.setCountryName("Poland");
@@ -120,7 +120,7 @@ public class ControllerIntegrationTest {
         s2.setBankName("bank 80");
         s2.setCountryName("Germany");
         s2.setIsHeadquarter(false);
-        s2.setSwiftCode("AABBCCDDEE99");
+        s2.setSwiftCode("AFV3HFKMXXX");
 
         webTestClient.post().uri("/v1/swift-codes").contentType(MediaType.APPLICATION_JSON)
                 .bodyValue(s2).exchange().expectStatus().isBadRequest()
