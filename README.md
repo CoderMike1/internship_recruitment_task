@@ -275,9 +275,10 @@ http://localhost:8080/v1/swift-codes/BIGBPLPWCUS
 ## Errors 
 
 ### Application catches the edge cases of wrong payload / wrong behaviour and returns to user error message
-<p align="center">
 <img src="screenshots/e1.png"  width="700" style="margin: 10px;">
+<hr>
 <img src="screenshots/e2.png"  width="700" style="margin: 10px;">
+<hr>
 <img src="screenshots/e3.png"  width="700" style="margin: 10px;">
+<hr>
 <img src="screenshots/e4.png"  width="700" style="margin: 10px;">
-</p>
