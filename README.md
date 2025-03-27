@@ -49,7 +49,6 @@ It's listening on http://localhost:8080/
 
 ## Run
 
-
 ### 1. Retrieve information of a bank by swift code
 
 #### Request:
