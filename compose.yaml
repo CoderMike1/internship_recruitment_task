@@ -19,7 +19,7 @@ services:
       - pgdata:/var/lib/postgresql/data
 
   app:
-    image: mihas011/remitly_recruitment_task_app
+    build: .
     container_name: app-container
     depends_on:
       postgres-db:
