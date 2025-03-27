@@ -1,0 +1,38 @@
+services:
+  postgres-db:
+    image: postgres
+    container_name: postgres-database
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: bank_codes_data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+    ports:
+      - 5433:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  app:
+    image: mihas011/remitly_recruitment_task_app
+    container_name: app-container
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-database:5432/bank_codes_data
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_JPA_HIBERNATE.DDL-AUTO: update
+    ports:
+      - 8080:8080
+
+volumes:
+  pgdata:
+
+
