@@ -37,10 +37,9 @@ git clone https://github.com/CoderMike1/internship_recruitment_task.git
 cd internship_recruitment_task
 ```
 
-Run docker compose, make sure to have your docker installed and you are logged in
+Run docker compose, make sure to have your docker installed
 
-```
-docker login    
+```  
 docker-compose up --build
 ```
 
