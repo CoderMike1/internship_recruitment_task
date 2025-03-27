@@ -14,7 +14,7 @@
 * [Errors](#errors)
 ---
 
-## General Info
+## 🔍General Info
 
 This application was made for the recruitment process at Remitly.
 It exposes a REST API that manages SWIFT codes and allows users to:
@@ -27,7 +27,7 @@ All data is stored in PostgreSQL database.<br>
 Application can be deployed on any device thanks to docker containerization.
 
 
-## Setup
+## ⚙️Setup
 
 Clone the repository and select proper directory
 
@@ -47,7 +47,7 @@ docker-compose up --build
 After a while, app is launched and ready!<br>
 It's listening on http://localhost:8080/
 
-## Run
+## 🚀Run
 
 ### 1. Retrieve information of a bank by swift code
 
@@ -267,11 +267,11 @@ http://localhost:8080/v1/swift-codes/BIGBPLPWCUS
   }
   ```
 
-## Test
+## 🧪Test
 
 ### Application is tested while building a image
 
-## Errors 
+## ❗Errors 
 
 ### Application catches the edge cases of wrong payload / wrong behaviour and returns to user error message
 <img src="screenshots/e1.png"  width="700" style="margin: 10px;">
