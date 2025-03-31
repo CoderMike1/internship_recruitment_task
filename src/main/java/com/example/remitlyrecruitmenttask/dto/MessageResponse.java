@@ -1,4 +1,4 @@
-package com.example.remitlyrecruitmenttask.restAPI;
+package com.example.remitlyrecruitmenttask.dto;
 
 public class MessageResponse {
     private String message;

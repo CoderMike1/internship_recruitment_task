@@ -1,6 +1,7 @@
-package com.example.remitlyrecruitmenttask.restAPI;
+package com.example.remitlyrecruitmenttask.controller;
 
 
+import com.example.remitlyrecruitmenttask.dto.MessageResponse;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;

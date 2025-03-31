@@ -1,7 +1,7 @@
 package com.example.remitlyrecruitmenttask;
 
-import com.example.remitlyrecruitmenttask.swift_data.SwiftData;
-import com.example.remitlyrecruitmenttask.swift_data.SwiftDataRepository;
+import com.example.remitlyrecruitmenttask.model.SwiftData;
+import com.example.remitlyrecruitmenttask.repository.SwiftDataRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;

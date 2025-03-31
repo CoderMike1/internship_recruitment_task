@@ -1,6 +1,8 @@
-package com.example.remitlyrecruitmenttask.swift_data;
+package com.example.remitlyrecruitmenttask.config;
 
 
+import com.example.remitlyrecruitmenttask.model.SwiftData;
+import com.example.remitlyrecruitmenttask.repository.SwiftDataRepository;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 import org.springframework.boot.CommandLineRunner;

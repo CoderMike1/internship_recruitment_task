@@ -1,8 +1,12 @@
-package com.example.remitlyrecruitmenttask.restAPI;
+package com.example.remitlyrecruitmenttask.controller;
 
 
-import com.example.remitlyrecruitmenttask.swift_data.SwiftData;
-import com.example.remitlyrecruitmenttask.swift_data.SwiftDataRepository;
+import com.example.remitlyrecruitmenttask.dto.Endpoint1ResponseFormat;
+import com.example.remitlyrecruitmenttask.dto.Endpoint2ResponseFormat;
+import com.example.remitlyrecruitmenttask.dto.MessageResponse;
+import com.example.remitlyrecruitmenttask.dto.SwiftCodeJSONFormat;
+import com.example.remitlyrecruitmenttask.model.SwiftData;
+import com.example.remitlyrecruitmenttask.repository.SwiftDataRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

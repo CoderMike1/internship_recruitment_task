@@ -1,9 +1,9 @@
 package com.example.remitlyrecruitmenttask;
 
 
-import com.example.remitlyrecruitmenttask.restAPI.Controller;
-import com.example.remitlyrecruitmenttask.swift_data.SwiftData;
-import com.example.remitlyrecruitmenttask.swift_data.SwiftDataRepository;
+import com.example.remitlyrecruitmenttask.controller.Controller;
+import com.example.remitlyrecruitmenttask.model.SwiftData;
+import com.example.remitlyrecruitmenttask.repository.SwiftDataRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

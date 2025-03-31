@@ -1,7 +1,6 @@
-package com.example.remitlyrecruitmenttask.swift_data;
+package com.example.remitlyrecruitmenttask.model;
 
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;

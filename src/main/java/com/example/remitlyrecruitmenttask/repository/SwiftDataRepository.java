@@ -1,5 +1,6 @@
-package com.example.remitlyrecruitmenttask.swift_data;
+package com.example.remitlyrecruitmenttask.repository;
 
+import com.example.remitlyrecruitmenttask.model.SwiftData;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
